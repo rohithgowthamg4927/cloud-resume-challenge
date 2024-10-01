@@ -1,0 +1,32 @@
+name: Update S3 and invalidate CloudFront cache
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Checkout code.
+      uses: actions/checkout@v3
+
+    - name: Configure AWS Credentials.
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id:      ${{ secrets.ACCESS_KEY }}
+        aws-secret-access-key:  ${{ secrets.SECRET_KEY }}
+        aws-region:             ap-south-1
+
+    - name: Sync files to S3 bucket
+      run: |
+        aws s3 sync . s3://cloud-resume-challenge-4927
+
+
+    - name: Invalidate CloudFront Distro
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION }} \
+          --paths "/*"
