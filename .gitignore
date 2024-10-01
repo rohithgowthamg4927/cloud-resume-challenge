@@ -1,0 +1,21 @@
+#IaC
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+#Environment
+.env
+
+#Lambda
+lambda_function.zip
+
+#VSCode
+.vscode/
+.idea/
+
+#Backup files
+*~
+*.bak
+*.tmp
