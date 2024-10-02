@@ -23,10 +23,19 @@ jobs:
     - name: Sync files to S3 bucket
       run: |
         aws s3 sync . s3://cloud-resume-challenge-4927
+        --exclude "*" \
+        --include "index.html" \
+        --include "style.css" \
+        --include "images-icons/*" \
+        --include "script.js" \
+        --include "RohithGowthamG_Resume.pdf"
 
 
     - name: Invalidate CloudFront Distro
       run: |
         aws cloudfront create-invalidation \
           --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION }} \
-          --paths "/*"
+          --paths "/index.html" \
+          --paths "/style.css" \
+          --paths "/script.js" \
+          --paths "RohithGowthamG_Resume.pdf"
