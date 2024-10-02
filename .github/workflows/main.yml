@@ -33,8 +33,8 @@ jobs:
     - name: Invalidate CloudFront Distro
       run: |
         aws cloudfront create-invalidation \
-          --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION }} \
-          --paths "/index.html" \
-          --paths "/style.css" \
-          --paths "/script.js" \
-          --paths "RohithGowthamG_Resume.pdf"
+        --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION }} \
+        --paths "/index.html" \
+        --paths "/style.css" \
+        --paths "/script.js" \
+        --paths "/RohithGowthamG_Resume.pdf"
