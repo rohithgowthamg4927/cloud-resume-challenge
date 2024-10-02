@@ -122,7 +122,6 @@ hr {
 
 .hamburger {
     display: none;
-    /* Default state */
     flex-direction: column;
     cursor: pointer;
     position: fixed;
@@ -142,12 +141,10 @@ hr {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        /* Show hamburger on small screens */
     }
 
     .sidebar {
         transform: translateX(-100%);
-        /* Hide sidebar off-screen */
         display: flex;
         position: fixed;
         top: 0;
@@ -159,22 +156,17 @@ hr {
 
     .sidebar.active {
         transform: translateX(0);
-        /* Show sidebar when active */
     }
 
     .content {
         margin-left: 0;
-        /* Remove left margin */
         width: 100%;
-        /* Full width on mobile */
     }
 }
 
 .content {
     margin-left: 360px;
-    /* Default margin for desktop */
     width: calc(100% - 360px);
-    /* Default width for desktop */
 }
 
 @media (max-width: 768px) {
