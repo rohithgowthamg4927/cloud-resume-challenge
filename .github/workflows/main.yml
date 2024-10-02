@@ -20,17 +20,16 @@ jobs:
         aws-secret-access-key:  ${{ secrets.SECRET_KEY }}
         aws-region:             ap-south-1
 
-    - name: Sync files to S3 bucket
+    - name: Sync files to S3 bucket.
       run: |
         aws s3 sync . s3://cloud-resume-challenge-4927 --exclude "*" \
         --include "index.html" \
         --include "style.css" \
-        --include "images-icons/*" \
         --include "script.js" \
         --include "RohithGowthamG_Resume.pdf"
 
 
-    - name: Invalidate CloudFront Distro
+    - name: Invalidate CloudFront Distribution.
       run: |
         aws cloudfront create-invalidation \
         --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION }} \
