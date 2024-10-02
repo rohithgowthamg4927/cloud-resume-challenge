@@ -14,6 +14,20 @@ window.addEventListener('resize', function () {
 
 window.dispatchEvent(new Event('resize'));
 
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+});
+
+
+
+
+
+
 const count = document.querySelector(".page-views");
 async function updateViewerCount() {
     let resp = await fetch(
