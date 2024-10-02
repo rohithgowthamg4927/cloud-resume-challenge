@@ -38,6 +38,8 @@ body, html {
     width: 100%;
 }
 
+
+
 .side-head {
     font-size: 8vh;
     font-weight: 550;
@@ -47,6 +49,20 @@ body, html {
     text-align: center;
     margin-bottom: 2.963vh;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .side-head {
+        font-size: 5.6vh;
+        text-align: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .side-head {
+        font-size: 4vh;
+        text-align: auto;
+    }
 }
 
 .side-head:hover {
@@ -86,6 +102,28 @@ nav ul li a {
 nav ul li a:hover {
     color: #e36e6e;
     font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 4vw;
+        text-align: auto;
+    }
+    hr {
+        width: 50%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    nav ul li a {
+        font-size: 4vw;
+        text-align: auto;
+    }
+    hr {
+        width: 50%;
+        margin-left: 0;
+    }
 }
 
 hr {
@@ -149,9 +187,9 @@ hr {
         position: fixed;
         top: 0;
         left: 0;
-        width: 28%;
+        width: 42%;
         height: 100vh;
-        z-index: 1000;
+        z-index: 1001;
     }
 
     .sidebar.active {
@@ -164,12 +202,27 @@ hr {
     }
 }
 
+
+@media (max-width: 425px) {
+    .sidebar {
+        width: 55%;
+    }
+}
+
+
 .content {
     margin-left: 360px;
     width: calc(100% - 360px);
 }
 
 @media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
     .content {
         margin-left: 0;
         width: 100%;
@@ -197,7 +250,7 @@ section p {
 
 #home {
     text-align: center;
-    padding-top: 3vh;
+    padding-top: 0;
 }
 
 .home-img img {
@@ -285,6 +338,115 @@ section p {
     }
 }
 
+@media (max-width: 768px) {
+    .home-img img {
+        height: 30vh;
+        width: 50vw;
+        margin-bottom: 2vh;
+    }
+
+    .home-name h2 {
+        font-size: 4vh;
+    }
+
+    .static-text {
+        font-size: 2.8vh;
+    }
+
+    .text-effects {
+        font-size: 3vh;
+        height: 4vh;
+        line-height: 4vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .text-effects ul {
+        animation: slide 8s infinite;
+    }
+
+    .text-effects li {
+        height: 4vh;
+        line-height: 4vh;
+    }
+
+    .page-views {
+        font-size: 2.8vh;
+    }
+}
+
+/* For smaller devices like phones (max-width: 425px) */
+@media (max-width: 425px) {
+    .home-img img {
+        height: 25vh;
+        width: 60vw;
+        margin-bottom: 1.5vh;
+    }
+
+    .home-name h2 {
+        font-size: 3.5vh;
+    }
+
+    .static-text {
+        font-size: 2.5vh;
+    }
+
+    .text-effects {
+        font-size: 2.8vh;
+        height: 3.5vh;
+        line-height: 3.5vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .text-effects ul {
+        animation: slidePhone 6s infinite;
+    }
+    .text-effects li {
+        height: 3.5vh;
+        line-height: 3.5vh;
+    }
+    .page-views {
+        font-size: 2.5vh;
+    }
+}
+
+
+@keyframes slidePhone {
+    0%, 15% {
+        top: 0;
+    }
+    25%, 40% {
+        top: -3.5vh;
+    }
+    50%, 65% {
+        top: -7vh;
+    }
+    75%, 90% {
+        top: -10.5vh;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes slideTablet {
+    0%, 15% {
+        top: 0;
+    }
+    25%, 40% {
+        top: -4vh;
+    }
+    50%, 65% {
+        top: -8vh;
+    }
+    75%, 90% {
+        top: -12vh;
+    }
+    100% {
+        top: 0;
+    }
+}
+
 
 #about {
     padding: 7vh 2.6vw;
@@ -357,7 +519,6 @@ section p {
     background-color: #1c1c1d;
 }
 
-
 .kubernetes-highlight {
     color: #1e90ff;
     font-weight: bold;
@@ -400,6 +561,85 @@ section p {
 .badge-link:hover {
     color: #d87f00;
     text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    #about {
+        padding: 5vh 5vw;
+    }
+
+    .about-container h2 {
+        font-size: 4.5vh;
+        left: 2vh;
+        top: 2vh;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10vh;
+    }
+
+    .about-img img {
+        width: 60vw;
+        height: auto;
+        margin: 0 0 4vh 0;
+    }
+
+    .about-text h3 {
+        font-size: 3.5vh;
+    }
+
+    .about-text p {
+        font-size: 2.2vh;
+        text-align: center;
+    }
+
+    .download-button a {
+        font-size: 2vh;
+        padding: 1vh 2.5vw;
+    }
+}
+
+
+@media (max-width: 425px) {
+    #about {
+        padding: 3vh 3vw;
+    }
+
+    .about-container h2 {
+        font-size: 3.8vh;
+        left: 1.5vh;
+        top: 1.5vh;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8vh;
+    }
+
+    .about-img img {
+        width: 80vw;
+        height: auto;
+        margin: 0 0 3vh 0;
+        margin-top: 4vh;
+    }
+
+    .about-text h3 {
+        font-size: 3.2vh;
+    }
+
+    .about-text p {
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    .download-button a {
+        font-size: 1.8vh;
+        padding: 0.8vh 2vw;
+    }
 }
 
 
@@ -477,7 +717,8 @@ section p {
 
 #achievements {
     position: relative;
-    margin-top: 5vh;
+    margin-top: 0;
+    margin-bottom: 0;
     text-align: center;
     padding-left: 0%;
 }
@@ -544,7 +785,6 @@ section p {
 
 #portfolio {
     position: relative;
-    margin-top: 50%;
     padding-left: 0;
 }
 
@@ -579,20 +819,20 @@ section p {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 2.75vh;
     justify-items: center;
 }
 
 img {
     width: 100%;
     height: auto; 
-    max-width: 450px; 
+    max-width: 61.72vh; 
     object-fit: contain; 
 }
 
 .flip-card {
     width: 100%; 
-    max-width: 450px;
+    max-width: 61.72vh;
     height: auto; 
     perspective: 1000px;
 }
@@ -668,4 +908,115 @@ img {
 .flip-card-back a:hover {
     background-color: #e36e6e;
     color: white;
+}
+
+@media (max-width: 768px) {
+    #portfolio {
+        padding-top: 40px;
+        /* Ensure space above the portfolio section */
+    }
+
+    #portfolio h2,
+    #portfolio p {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* Uniform gap between images */
+    }
+
+    .portfolio-grid>* {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+        /* Space below each item */
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .flip-card-back h3 {
+        font-size: 2rem;
+    }
+
+    .flip-card-back p {
+        font-size: 1rem;
+    }
+
+    .flip-card-back a {
+        width: 10vh;
+        height: 10vh;
+        font-size: 6vh;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 425px) {
+    #portfolio {
+        padding-top: 40px;
+        /* Ensure space above the portfolio section */
+    }
+
+    #portfolio h2 {
+        font-size: 6vh;
+        margin-top: 10vh;
+        /* Space above the title */
+    }
+
+    #portfolio p {
+        font-size: 3vh;
+        margin-top: 2vh;
+        /* Space above the paragraph */
+    }
+
+    .portfolio-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .portfolio-grid>* {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+        /* Space below each item */
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .flip-card-back h3 {
+        font-size: 2rem;
+    }
+
+    .flip-card-back p {
+        font-size: 1rem;
+    }
+
+    .flip-card-back a {
+        width: 10vh;
+        height: 10vh;
+        font-size: 6vh;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+    }
 }
