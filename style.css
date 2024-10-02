@@ -38,7 +38,6 @@ body, html {
     width: 100%;
 }
 
-
 .side-head {
     font-size: 8vh;
     font-weight: 550;
@@ -54,7 +53,6 @@ body, html {
     color: #e36e6e;
     transform: scale(1.5);
 }
-
 
 nav ul {
     list-style-type: none;
@@ -90,12 +88,10 @@ nav ul li a:hover {
     font-weight: 500;
 }
 
-
 hr {
     border: 0.72px solid rgba(255, 255, 255, 0.3);
     width: 130%;
 }
-
 
 .socials {
     display: flex;
@@ -124,9 +120,9 @@ hr {
     color: white;
 }
 
-
 .hamburger {
-    display: none; /*default state */
+    display: none;
+    /* Default state */
     flex-direction: column;
     cursor: pointer;
     position: fixed;
@@ -143,14 +139,15 @@ hr {
     transition: 0.4s;
 }
 
-
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        /* Show hamburger on small screens */
     }
 
     .sidebar {
         transform: translateX(-100%);
+        /* Hide sidebar off-screen */
         display: flex;
         position: fixed;
         top: 0;
@@ -162,14 +159,22 @@ hr {
 
     .sidebar.active {
         transform: translateX(0);
+        /* Show sidebar when active */
+    }
+
+    .content {
+        margin-left: 0;
+        /* Remove left margin */
+        width: 100%;
+        /* Full width on mobile */
     }
 }
 
-
-
 .content {
     margin-left: 360px;
+    /* Default margin for desktop */
     width: calc(100% - 360px);
+    /* Default width for desktop */
 }
 
 @media (max-width: 768px) {

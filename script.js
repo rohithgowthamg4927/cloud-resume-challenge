@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     
     hamburger.addEventListener('click', () => {
+        console.log('hamburger clicked');
         sidebar.classList.toggle('active');
     });
 });
