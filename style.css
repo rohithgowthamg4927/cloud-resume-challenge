@@ -12,6 +12,7 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    overflow-y: auto;
     scroll-behavior: smooth;
 }
 
@@ -26,9 +27,10 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
     color: white;
-    padding: 20px 0;
+    padding: 0;
     transition: transform 0.3s ease;
     transform: translateX(0);
+    z-index: 1001;
 }
 
 .sidebar-header {
@@ -36,9 +38,8 @@ body, html {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    flex: 0 0 auto;
 }
-
-
 
 .side-head {
     font-size: 8vh;
@@ -51,30 +52,10 @@ body, html {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .side-head {
-        font-size: 5.6vh;
-        text-align: auto;
-    }
-}
-
-@media (max-width: 425px) {
-    .side-head {
-        font-size: 4vh;
-        text-align: auto;
-    }
-}
-
-.side-head:hover {
-    color: #e36e6e;
-    transform: scale(1.5);
-}
-
 nav ul {
     list-style-type: none;
-    padding: 20px;
+    padding: 2vh 0;
     width: 100%;
-    text-align: left;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -82,9 +63,9 @@ nav ul {
 }
 
 nav ul li {
-    padding: 15px 20px;
+    padding: 2vh 0;
     width: 100%;
-    text-align: start;
+    margin-left: 6vh;
 }
 
 nav ul li a {
@@ -104,49 +85,29 @@ nav ul li a:hover {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    nav ul li a {
-        font-size: 4vw;
-        text-align: auto;
-    }
-    hr {
-        width: 50%;
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 425px) {
-    nav ul li a {
-        font-size: 4vw;
-        text-align: auto;
-    }
-    hr {
-        width: 50%;
-        margin-left: 0;
-    }
-}
-
 hr {
     border: 0.72px solid rgba(255, 255, 255, 0.3);
-    width: 130%;
+    width: 90%;
+    margin: 1vh auto;
 }
 
 .socials {
     display: flex;
     justify-content: center;
     gap: 2.5vh;
-    padding: 7.5vh;
+    padding: 3vh 0;
     margin-top: auto;
+    flex: 0 0 auto;
 }
 
 .socials a {
     display: inline-block;
-    width: 6.8vh;
-    height: 6.8vh;
+    width: 8vh;
+    height: 8vh;
     border-radius: 50%;
     background-color: #232f3e;
     color: rgb(231, 222, 222);
-    font-size: 3vh;
+    font-size: 4vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,27 +130,40 @@ hr {
 }
 
 .hamburger span {
-    height: 0.5vh;
-    width: 5vw;
+    height: 1.1vh;
+    border-radius: 3.5vh;
+    width: 12vw;
     background: #232f3e;
-    margin: 1vh 0;
+    margin: 0.7vh 0;
     transition: 0.4s;
 }
 
 @media (max-width: 768px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .side-head {
+        font-size: 5.6vh;
+    }
+
+    nav ul li a {
+        font-size: 4vw;
+    }
+
+    hr {
+        width: 80%;
+        margin: 1vh 0;
+    }
+
     .hamburger {
         display: flex;
     }
 
     .sidebar {
         transform: translateX(-100%);
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 42%;
-        height: 100vh;
-        z-index: 1001;
+        width: 75%;
     }
 
     .sidebar.active {
@@ -202,10 +176,36 @@ hr {
     }
 }
 
-
 @media (max-width: 425px) {
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .side-head {
+        font-size: 4vh;
+    }
+
+    nav ul li {
+        display: flex;
+        margin-left: 5vh;
+    }
+
+    nav ul li a {
+        font-size: 4vw;
+    }
+
     .sidebar {
-        width: 55%;
+        width: 60%;
+    }
+    .socials {
+        gap: 1.5vh;
+        padding: 5vh 0;
+    }
+    .socials a {
+        width: 6vh;
+        height: 6vh;
+        font-size: 3vh;
     }
 }
 
@@ -517,6 +517,7 @@ section p {
 
 .download-button a:hover {
     background-color: #1c1c1d;
+    transform: translate(1.5);
 }
 
 .kubernetes-highlight {
@@ -530,7 +531,7 @@ section p {
 }
 
 .kubernetes-highlight::after {
-    content: 'Container orchestration at scale 🚀';
+    content: 'Container orchestration at scale!';
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -955,18 +956,19 @@ img {
 
 @media (max-width: 425px) {
     .portfolio-grid {
+        margin-top: 160%;
         grid-template-columns: 1fr;
         gap: 3vh;
+        overflow-y: auto;
     }
 
     .flip-card {
         max-width: 100%;
-        /* Full width */
         margin-bottom: 2vh;
     }
 
     img {
-        max-width: 100%;
+        max-width: 90%;
     }
 
     .flip-card-back {
