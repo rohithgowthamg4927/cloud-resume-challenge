@@ -23,11 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-
-
-
 const count = document.querySelector(".page-views");
 async function updateViewerCount() {
     let resp = await fetch(
