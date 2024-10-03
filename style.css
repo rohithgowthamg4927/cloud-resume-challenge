@@ -6,7 +6,6 @@
     --font-ram: 'Rambla', sans-serif;
 }
 
-
 body, html {
     margin: 0;
     padding: 0;
@@ -177,7 +176,7 @@ hr {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 435px) {
 
     html {
         scroll-behavior: smooth;
@@ -223,7 +222,7 @@ hr {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 435px) {
     .content {
         margin-left: 0;
         width: 100%;
@@ -377,7 +376,7 @@ section p {
 }
 
 /* For smaller devices like phones (max-width: 425px) */
-@media (max-width: 425px) {
+@media (max-width: 435px) {
     .home-img img {
         height: 25vh;
         width: 60vw;
@@ -400,7 +399,7 @@ section p {
         overflow: hidden;
     }
     .text-effects ul {
-        animation: slidePhone 6s infinite;
+        animation: slidePhone 7s infinite;
     }
     .text-effects li {
         height: 3.5vh;
@@ -431,16 +430,16 @@ section p {
 }
 
 @keyframes slideTablet {
-    0%, 15% {
+    0%, 20% {
         top: 0;
     }
-    25%, 40% {
+    30%, 45% {
         top: -4vh;
     }
-    50%, 65% {
+    55%, 70% {
         top: -8vh;
     }
-    75%, 90% {
+    80%, 95% {
         top: -12vh;
     }
     100% {
@@ -590,11 +589,11 @@ section p {
     }
 
     .about-text h3 {
-        font-size: 3.5vh;
+        font-size: 2.5vh;
     }
 
     .about-text p {
-        font-size: 2.2vh;
+        font-size: 1.7vh;
         text-align: center;
     }
 
@@ -605,7 +604,7 @@ section p {
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 435px) {
     #about {
         padding: 3vh 3vw;
     }
@@ -897,13 +896,6 @@ img {
     bottom: 1.37vh;
 }
 
-
-.flip-card-back p {
-    font-size: 0.8rem;
-    margin-bottom: 1vh;
-}
-
-
 .flip-card-back a {
     display: inline-block;
     width: 6.8vh;
@@ -921,12 +913,10 @@ img {
     z-index: 10;
 }
 
-
 .flip-card-back a:hover {
     background-color: #e36e6e;
     color: white;
 }
-
 
 @media (max-width: 768px) {
     .portfolio-grid {
@@ -935,7 +925,8 @@ img {
     }
 
     .flip-card {
-        max-width: 100%;
+        max-width: 90%;
+        height: 35vh;
         margin-bottom: 3vh;
     }
 
@@ -954,41 +945,32 @@ img {
     }
 }
 
-
-@media (max-width: 425px) {
+@media (max-width: 435px) {
     .portfolio-grid {
-        margin-top: 160%;
+        margin-top: 350%;
         grid-template-columns: 1fr;
-        gap: 3vh;
+        gap: 2vh;
         overflow-y: auto;
     }
 
-    .flip-card {
-        max-width: 100%;
+    .flip-card,
+    .flip-card-back,
+    img {
+        max-width: 90%;
+        height: 30vh;
         margin-bottom: 2vh;
     }
 
-    img {
-        max-width: 90%;
-    }
-
-    .flip-card-back {
-        padding: 20px;
-        height: auto;
-    }
-
     .flip-card-back h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin-top: 1vh;
-    }
-
-    .flip-card-back p {
-        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
     }
 
     .flip-card-back a {
-        width: 6vh;
-        height: 6vh;
-        font-size: 4vh;
+        width: 8vh;
+        height: 8vh;
+        font-size: 5vh;
     }
 }
