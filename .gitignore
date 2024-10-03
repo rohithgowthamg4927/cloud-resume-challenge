@@ -19,6 +19,3 @@ lambda_function.zip
 *~
 *.bak
 *.tmp
-
-.git/
-.github/
