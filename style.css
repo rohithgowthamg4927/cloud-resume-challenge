@@ -216,6 +216,9 @@ hr {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .content {
         margin-left: 0;
         width: 100%;
@@ -223,6 +226,9 @@ hr {
 }
 
 @media (max-width: 435px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .content {
         margin-left: 0;
         width: 100%;
@@ -339,6 +345,9 @@ section p {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .home-img img {
         height: 30vh;
         width: 50vw;
@@ -377,6 +386,9 @@ section p {
 
 /* For smaller devices like phones (max-width: 425px) */
 @media (max-width: 435px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .home-img img {
         height: 25vh;
         width: 60vw;
@@ -566,6 +578,9 @@ section p {
 
 
 @media (max-width: 768px) {
+    html {
+        scroll-behavior: smooth;
+    }
     #about {
         padding: 5vh 5vw;
     }
@@ -605,6 +620,9 @@ section p {
 
 
 @media (max-width: 435px) {
+    html {
+        scroll-behavior: smooth;
+    }
     #about {
         padding: 3vh 3vw;
     }
@@ -716,6 +734,18 @@ section p {
     background-color: #283e593c;
 }
 
+@media (max-width: 767px) {
+    html {
+        scroll-behavior: smooth;
+    }
+} 
+
+@media (max-width: 435px) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 #achievements {
     position: relative;
     margin-top: 0;
@@ -771,7 +801,7 @@ section p {
 }
 
 #achievements li a {
-    color: #0000EE;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -779,9 +809,21 @@ section p {
     color: #333;
 }
 
-#achievements li:hover {
+#achievements li:hover, #achievements li a:hover {
     color: #05a0d1;
     transition: color 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media (max-width: 435px) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 #portfolio {
@@ -919,6 +961,9 @@ img {
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 3vh;
@@ -946,6 +991,9 @@ img {
 }
 
 @media (max-width: 435px) {
+    html {
+        scroll-behavior: smooth;
+    }
     .portfolio-grid {
         margin-top: 350%;
         grid-template-columns: 1fr;
