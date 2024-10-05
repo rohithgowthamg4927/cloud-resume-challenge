@@ -188,6 +188,7 @@ hr {
 
     .sidebar {
         width: 60%;
+        overflow-y: auto;
     }
     .socials {
         gap: 1.5vh;

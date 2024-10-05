@@ -9,7 +9,7 @@ document.querySelectorAll('.sidebar nav ul li a').forEach(anchor => {
 
 window.addEventListener('resize', function () {
     document.querySelectorAll('section').forEach(section => {
-        section.style.height = `${window.innerHeight}px`;
+        section.style.minHeight = `${window.innerHeight}px`;
     });
 });
 
@@ -21,11 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function adjustSidebarHeight() {
         if (window.innerWidth <= 768) {
-            const headerHeight = document.querySelector('.sidebar-header').offsetHeight;
-            const socialHeight = document.querySelector('.socials').offsetHeight;
-
-            const availableHeight = window.innerHeight - headerHeight - socialHeight;
-            sidebar.style.height = `${availableHeight}px`;
+            sidebar.style.height = '80vh';
         } else {
             sidebar.style.height = '100vh';
         }
