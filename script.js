@@ -21,7 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function adjustSidebarHeight() {
         if (window.innerWidth <= 768) {
-            sidebar.style.height = '80vh';
+            const headerHeight = document.querySelector('.sidebar-header').offsetHeight;
+            const socialHeight = document.querySelector('.socials').offsetHeight;
+
+            const availableHeight = window.innerHeight - headerHeight - socialHeight;
+            sidebar.style.height = `${availableHeight}px`;
         } else {
             sidebar.style.height = '100vh';
         }
