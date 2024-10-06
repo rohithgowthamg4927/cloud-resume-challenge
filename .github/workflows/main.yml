@@ -26,7 +26,10 @@ jobs:
         --include "index.html" \
         --include "style.css" \
         --include "script.js" \
-        --include "RohithGowthamG_Resume.pdf"
+        --include "RohithGowthamG_Resume.pdf" \
+        --include "icons/*" \
+        --include "images/*"
+
 
 
     - name: Invalidate CloudFront Distribution.
