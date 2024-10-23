@@ -209,8 +209,8 @@ hr {
 
 
 .content {
-    margin-left: 360px;
-    width: calc(100% - 360px);
+    margin-left: 22.7%;
+    width: calc(100% - 22.7%);
 }
 
 @media (max-width: 768px) {
