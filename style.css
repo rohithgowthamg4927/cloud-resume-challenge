@@ -6,6 +6,10 @@
     --font-ram: 'Rambla', sans-serif;
 }
 
+*, *::before, *::after {
+    box-sizing; border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
