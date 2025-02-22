@@ -26,7 +26,7 @@ jobs:
         --include "index.html" \
         --include "style.css" \
         --include "script.js" \
-        --include "RohithGowthamG_Resume.pdf" \
+        --include "RohithGowthamG-Resume.pdf" \
         --include "icons/*" \
         --include "images/*"
 
